@@ -20,6 +20,7 @@
             android:layout_height="@dimen/mealennium_top_action_bar_image_dimensions"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
+            android:layout_margin="20dp"
             android:background="@drawable/click_effect"
             tools:src="@drawable/navigation_drawer_icon" />
 
