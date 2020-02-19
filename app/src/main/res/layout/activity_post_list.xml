@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:fitsSystemWindows="true">
+
+    <com.benohayon.meallennium.ui.custom_views.TopActionBar
+        android:id="@+id/postListActivityTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/postListActivityDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/postListActivityTopBar"
+        tools:openDrawer="start">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/postListActivityContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/postListActivityProgressBar"
+                android:layout_width="@dimen/app_progress_bar_dimensions"
+                android:layout_height="@dimen/app_progress_bar_dimensions"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/postListFragmentAddPostFab"
+                android:layout_width="@dimen/post_list_activity_add_post_fab_dimensions"
+                android:layout_height="@dimen/post_list_activity_add_post_fab_dimensions"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/add_post_fab_background"
+                android:src="@mipmap/plus_icon"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:padding="8dp"/>
+
+        </FrameLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/postListActivityNavigationView"
+            android:layout_width="@dimen/post_list_activity_navigation_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/navigation_drawer_headline"
+            app:menu="@menu/navigation_drawer_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

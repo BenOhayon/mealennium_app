@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="stylableView">
+        <attr name="fontType" format="enum">
+            <enum name="proxima_nova-regular" value="0" />
+            <enum name="proxima_nova-bold" value="1" />
+            <enum name="proxima_nova-thin" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

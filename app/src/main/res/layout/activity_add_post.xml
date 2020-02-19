@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    tools:context=".ui.activities.AddPostActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.benohayon.meallennium.ui.custom_views.TopActionBar
+            android:id="@+id/addPostActivityAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/addPostActivityBottomButtonsFrame"
+            android:layout_below="@+id/addPostActivityPictureCaptureButtonsFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/addPostActivityImageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/meallennium_splash"
+                android:background="@color/brilliantSilver"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/addPostActivityPostDetailsInputFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addPostActivityAppBar"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+                    android:id="@+id/addPostActivityPostTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/add_post_activity_post_title_edit_text_hint"
+                    android:inputType="text"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+                    android:id="@+id/addPostActivityPostSummeryEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/add_post_activity_post_summery_edit_text_hint"
+                    android:inputType="text"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+                    android:id="@+id/addPostActivityPostDescriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/add_post_activity_post_description_edit_text_hint"
+                    android:inputType="text|textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addPostActivityPictureCaptureButtonsFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addPostActivityPostDetailsInputFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+                android:id="@+id/addPostActivityTakePictureButton"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/add_post_activity_take_picture_button_text" />
+
+            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+                android:id="@+id/addPostActivityPickFromGalleryButton"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/add_post_activity_pick_from_gallery_button_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addPostActivityBottomButtonsFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+                android:id="@+id/addPostActivityCreateButton"
+                style="@style/buttonStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="@string/add_post_activity_create_button_text" />
+
+            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+                android:id="@+id/addPostActivityCancelButton"
+                style="@style/buttonStyle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/add_post_activity_cancel_button_text" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/addPostActivityProgressBar"
+            android:layout_width="@dimen/app_progress_bar_dimensions"
+            android:layout_height="@dimen/app_progress_bar_dimensions"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</FrameLayout>

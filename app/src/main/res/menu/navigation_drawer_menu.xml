@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigationDrawerMenuHomeOption"
+            android:title="@string/navigation_drawer_menu_home_option_text" />
+        <item
+            android:id="@+id/navigationDrawerMenuMyPostsOption"
+            android:title="@string/navigation_drawer_menu_my_posts_option_text" />
+    </group>
+
+    <item android:title="@string/navigation_drawer_menu_actions_group_text">
+        <menu>
+            <item
+                android:id="@+id/navigationDrawerMenuSettingsOption"
+                android:title="@string/navigation_drawer_menu_settings_option_text" />
+
+            <item
+                android:id="@+id/navigationDrawerMenuAboutOption"
+                android:title="@string/navigation_drawer_menu_about_option_text" />
+
+            <item
+                android:id="@+id/navigationDrawerMenuSignOutOption"
+                android:title="@string/navigation_drawer_menu_sign_out_option_text" />
+        </menu>
+    </item>
+
+</menu>

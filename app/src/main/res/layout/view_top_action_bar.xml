@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topActionBarSearchBoxFrame"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mealennium_top_action_bar_height"
+    android:background="@color/brilliantBlue"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/topActionBarLeftButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mealennium_top_action_bar_image_dimensions"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:background="@drawable/click_effect"
+            tools:src="@drawable/navigation_drawer_icon" />
+
+        <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+            android:id="@+id/topActionBarCenterText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:fontType="proxima_nova-bold"
+            tools:text="Hello, User" />
+
+        <ImageView
+            android:id="@+id/topActionBarRightButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mealennium_top_action_bar_image_dimensions"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:background="@drawable/click_effect"
+            tools:src="@drawable/search_white_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topActionBarSearchBox"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+            android:id="@+id/topActionBarSearchBoxEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:background="@color/white"
+            android:hint="@string/top_action_bar_search_edit_text_hint"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:paddingStart="20dp" />
+
+        <ImageView
+            android:id="@+id/topActionBarSearchBoxCloseButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/mealennium_top_action_bar_image_dimensions"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:background="@drawable/click_effect"
+            android:src="@drawable/close_search_icon"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+</FrameLayout>

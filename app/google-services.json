@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "10642535149",
+    "firebase_url": "https://meallennium-599e9.firebaseio.com",
+    "project_id": "meallennium-599e9",
+    "storage_bucket": "meallennium-599e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10642535149:android:16913bd0b1f0e73c",
+        "android_client_info": {
+          "package_name": "com.benohayon.meallennium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10642535149-23p5vajfa019jjc4o9gub8fk20lrok07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsxl0F_I2vPoqs11NIaoEgn30Tuf6jvaU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10642535149-23p5vajfa019jjc4o9gub8fk20lrok07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
