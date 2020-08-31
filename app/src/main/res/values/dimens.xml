@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="app_progress_bar_dimensions">50dp</dimen>
     <dimen name="app_button_text_size">19dp</dimen>
 
     <dimen name="app_edit_text_text_size">16dp</dimen>
 
     <dimen name="sign_in_button_width">300dp</dimen>
     <dimen name="sign_in_button_space_between_text_and_image">12dp</dimen>
-    <dimen name="dont_have_account_frame_text_size">16dp</dimen>
     <dimen name="edit_text_height">45dp</dimen>
 
     <dimen name="post_list_activity_navigation_drawer_width">330dp</dimen>
 
     <dimen name="mealennium_top_action_bar_image_dimensions">30dp</dimen>
     <dimen name="mealennium_top_action_bar_height">60dp</dimen>
-
-    <dimen name="post_list_activity_add_post_fab_dimensions">50dp</dimen>
 
     <dimen name="about_activity_version_text_size">20dp</dimen>
     <dimen name="about_activity_logo_dimensions">250dp</dimen>

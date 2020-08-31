@@ -5,17 +5,17 @@ import android.content.Context
 import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.benohayon.meallennium.R
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 
 object PopupManager {
 
     private fun getInflatedView(context: Context, title: String, message: String): View? {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.layout_popup, null)
-        val titleText: StyledTextView = view.findViewById(R.id.popupTitleText)
-        val messageText: StyledTextView = view.findViewById(R.id.popupMessageText)
+        val titleText: TextView = view.findViewById(R.id.popupTitleText)
+        val messageText: TextView = view.findViewById(R.id.popupMessageText)
         titleText.text = title
         messageText.text = message
 

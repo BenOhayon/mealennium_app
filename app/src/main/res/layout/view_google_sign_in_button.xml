@@ -7,13 +7,14 @@
     <ImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@mipmap/google_button_image" />
+        android:src="@drawable/google_button_image" />
 
-    <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/home_screen_sign_in_with_google_button_text"
         android:textSize="@dimen/app_button_text_size"
+        android:fontFamily="@font/proximanova_regular"
         android:layout_marginStart="@dimen/sign_in_button_space_between_text_and_image"/>
 
 </LinearLayout>

@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp" />
 
-                <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+                <TextView
                     android:id="@+id/homeScreenSignInWithEmailButton"
                     style="@style/buttonStyle"
                     android:layout_width="@dimen/sign_in_button_width"
@@ -71,8 +71,8 @@
 
     <ProgressBar
         android:id="@+id/homeScreenProgressBar"
-        android:layout_width="@dimen/app_progress_bar_dimensions"
-        android:layout_height="@dimen/app_progress_bar_dimensions"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:visibility="invisible"/>
 

@@ -8,7 +8,7 @@ import com.benohayon.meallennium.framework.models.USER_FIRST_NAME_KEY
 import com.benohayon.meallennium.framework.models.USER_LAST_NAME_KEY
 import com.benohayon.meallennium.framework.models.USER_LOGIN_METHOD_KEY
 
-class MeallenniumSharedPreferences(val context: Context) {
+class MealenniumSharedPreferences(val context: Context) {
 
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences("meallennium", Context.MODE_PRIVATE)
 

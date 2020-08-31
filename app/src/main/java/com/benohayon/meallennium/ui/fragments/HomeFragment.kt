@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.framework.managers.FirebaseManager
@@ -17,7 +18,6 @@ import com.benohayon.meallennium.ui.activities.HomeActivity
 import com.benohayon.meallennium.ui.custom_views.DontHaveAccountFrame
 import com.benohayon.meallennium.ui.custom_views.FacebookSignInButton
 import com.benohayon.meallennium.ui.custom_views.GoogleSignInButton
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
     private val GOOGLE_SIGN_IN_REQUEST_CODE = 4567
 
     private lateinit var dontHaveAccountFrame: DontHaveAccountFrame
-    private lateinit var signInWithEmailButton: StyledTextView
+    private lateinit var signInWithEmailButton: TextView
     private lateinit var facebookSignInButton: FacebookSignInButton
     private lateinit var googleSignInButton: GoogleSignInButton
     private lateinit var progressBar: ProgressBar

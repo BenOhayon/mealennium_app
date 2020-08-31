@@ -4,12 +4,11 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.benohayon.meallennium.R
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 
 class TopActionBar : LinearLayout {
 
@@ -21,8 +20,8 @@ class TopActionBar : LinearLayout {
 
     private lateinit var leftButton: ImageView
     private lateinit var rightButton: ImageView
-    private lateinit var centerTextView: StyledTextView
-    private lateinit var searchBoxEditText: StyledEditText
+    private lateinit var centerTextView: TextView
+    private lateinit var searchBoxEditText: EditText
 
     constructor(context: Context?) : super(context) {
         init(context)

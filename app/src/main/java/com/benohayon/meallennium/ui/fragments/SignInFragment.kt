@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.framework.managers.FirebaseManager
@@ -15,12 +16,11 @@ import com.benohayon.meallennium.framework.managers.UserManager
 import com.benohayon.meallennium.framework.utils.PopupManager
 import com.benohayon.meallennium.framework.utils.MealenniumFragmentManager
 import com.benohayon.meallennium.ui.activities.HomeActivity
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 
 class SignInFragment : Fragment() {
 
-    private lateinit var signInButton: StyledTextView
-    private lateinit var backButton: StyledTextView
+    private lateinit var signInButton: TextView
+    private lateinit var backButton: TextView
     private lateinit var emailEt: EditText
     private lateinit var passwordEt: EditText
     private lateinit var progressBar: ProgressBar

@@ -22,7 +22,6 @@ import com.benohayon.meallennium.framework.utils.MealenniumFragmentManager
 import com.benohayon.meallennium.framework.utils.PopupManager
 import com.benohayon.meallennium.ui.activities.abs.BaseActivity
 import com.benohayon.meallennium.ui.custom_views.TopActionBar
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 import com.benohayon.meallennium.ui.fragments.MyPostsFragment
 import com.benohayon.meallennium.ui.fragments.PostListFragment
 import com.benohayon.meallennium.ui.fragments.SettingsFragment
@@ -106,8 +105,8 @@ class HomeActivity : BaseActivity() {
         drawerLayout = findViewById(R.id.postListActivityDrawerLayout)
         navigationView = findViewById(R.id.postListActivityNavigationView)
 
-        val userEmailTextView: StyledTextView = navigationView.getHeaderView(0).findViewById(R.id.navigationDrawerHeadlineUserEmail)
-        val userNameTextView: StyledTextView = navigationView.getHeaderView(0).findViewById(R.id.navigationDrawerHeadlineUserName)
+        val userEmailTextView: TextView = navigationView.getHeaderView(0).findViewById(R.id.navigationDrawerHeadlineUserEmail)
+        val userNameTextView: TextView = navigationView.getHeaderView(0).findViewById(R.id.navigationDrawerHeadlineUserName)
         userEmailTextView.text = UserManager.getEmail(this)
         userNameTextView.text = UserManager.getName(this)
 

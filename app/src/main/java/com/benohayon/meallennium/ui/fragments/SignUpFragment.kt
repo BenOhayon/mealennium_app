@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.framework.managers.FirebaseManager
@@ -18,17 +19,15 @@ import com.benohayon.meallennium.framework.managers.UserManager
 import com.benohayon.meallennium.framework.utils.PopupManager
 import com.benohayon.meallennium.framework.utils.MealenniumFragmentManager
 import com.benohayon.meallennium.ui.activities.HomeActivity
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 
 class SignUpFragment : Fragment() {
 
     private lateinit var nameEt: EditText
     private lateinit var emailEt: EditText
-    private lateinit var passwordEt: StyledEditText
+    private lateinit var passwordEt: EditText
     private lateinit var confirmPasswordEt: EditText
-    private lateinit var backButton: StyledTextView
-    private lateinit var signUpButton: StyledTextView
+    private lateinit var backButton: TextView
+    private lateinit var signUpButton: TextView
     private lateinit var progressBar: ProgressBar
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

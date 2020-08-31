@@ -18,6 +18,7 @@
         <item name="android:background">@drawable/styled_button_background</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/app_button_text_size</item>
+        <item name="android:fontFamily">@font/proximanova_regular</item>
     </style>
 
     <style name="editTextStyle">

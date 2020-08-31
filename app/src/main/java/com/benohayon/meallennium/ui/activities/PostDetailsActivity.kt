@@ -1,6 +1,7 @@
 package com.benohayon.meallennium.ui.activities
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.framework.models.POST_AUTHOR_KEY
@@ -8,13 +9,12 @@ import com.benohayon.meallennium.framework.models.POST_CONTENT_KEY
 import com.benohayon.meallennium.framework.models.POST_SUMMERY_KEY
 import com.benohayon.meallennium.framework.models.POST_TITLE_KEY
 import com.benohayon.meallennium.ui.custom_views.TopActionBar
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 
 class PostDetailsActivity : AppCompatActivity() {
 
-    private lateinit var summeryTextView: StyledTextView
-    private lateinit var contentTextView: StyledTextView
-    private lateinit var createdByText: StyledTextView
+    private lateinit var summeryTextView: TextView
+    private lateinit var contentTextView: TextView
+    private lateinit var createdByText: TextView
     private lateinit var topActionBar: TopActionBar
 
     override fun onCreate(savedInstanceState: Bundle?) {

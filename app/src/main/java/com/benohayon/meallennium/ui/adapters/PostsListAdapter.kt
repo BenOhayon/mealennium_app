@@ -5,11 +5,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.framework.models.*
 import com.benohayon.meallennium.ui.activities.PostDetailsActivity
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 
 class PostsListAdapter(val context: Context, private val list: List<Post>) : RecyclerView.Adapter<PostsListAdapter.PostsListViewHolder>() {
 
@@ -37,9 +37,9 @@ class PostsListAdapter(val context: Context, private val list: List<Post>) : Rec
 
     class PostsListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        val postTitle: StyledTextView = view.findViewById(R.id.postListItemPostTitle)
-        val postAuthorName: StyledTextView = view.findViewById(R.id.postListItemAuthorName)
-        val postSummery: StyledTextView = view.findViewById(R.id.postListItemPostContent)
+        val postTitle: TextView = view.findViewById(R.id.postListItemPostTitle)
+        val postAuthorName: TextView = view.findViewById(R.id.postListItemAuthorName)
+        val postSummery: TextView = view.findViewById(R.id.postListItemPostContent)
 
     }
 }

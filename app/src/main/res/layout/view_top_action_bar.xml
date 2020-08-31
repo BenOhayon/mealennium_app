@@ -24,7 +24,7 @@
             android:background="@drawable/click_effect"
             tools:src="@drawable/navigation_drawer_icon" />
 
-        <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+        <TextView
             android:id="@+id/topActionBarCenterText"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:textColor="@color/white"
             android:textSize="20dp"
-            app:fontType="proxima_nova-bold"
+            android:fontFamily="@font/proximanova_bold"
             tools:text="Hello, User" />
 
         <ImageView
@@ -56,7 +56,7 @@
         android:orientation="horizontal"
         android:weightSum="3">
 
-        <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+        <EditText
             android:id="@+id/topActionBarSearchBoxEditText"
             android:layout_width="0dp"
             android:layout_height="match_parent"

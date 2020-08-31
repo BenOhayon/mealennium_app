@@ -27,7 +27,7 @@
             android:orientation="vertical"
             android:paddingTop="60dp">
 
-            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+            <EditText
                 android:id="@+id/signUpScreenNameEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
@@ -37,7 +37,7 @@
                 android:inputType="textEmailAddress"
                 android:textSize="@dimen/app_edit_text_text_size" />
 
-            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+            <EditText
                 android:id="@+id/signUpScreenEmailEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
@@ -48,7 +48,7 @@
                 android:inputType="textEmailAddress"
                 android:textSize="@dimen/app_edit_text_text_size" />
 
-            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+            <EditText
                 android:id="@+id/signUpScreenPasswordEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
@@ -59,7 +59,7 @@
                 android:inputType="textPassword"
                 android:textSize="@dimen/app_edit_text_text_size" />
 
-            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
+            <EditText
                 android:id="@+id/signUpScreenConfirmPasswordEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
@@ -80,7 +80,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+            <TextView
                 android:id="@+id/signUpScreenSignUpButton"
                 style="@style/buttonStyle"
                 android:layout_width="150dp"
@@ -88,7 +88,7 @@
                 android:layout_marginEnd="15dp"
                 android:text="@string/sign_up_screen_sign_up_button_text" />
 
-            <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+            <TextView
                 android:id="@+id/signUpScreenBackButton"
                 style="@style/buttonStyle"
                 android:layout_width="150dp"
@@ -101,8 +101,8 @@
 
     <ProgressBar
         android:id="@+id/signUpScreenProgressBar"
-        android:layout_width="@dimen/app_progress_bar_dimensions"
-        android:layout_height="@dimen/app_progress_bar_dimensions"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:visibility="invisible" />
 

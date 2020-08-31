@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/dodgerBlue"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -13,21 +14,21 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher" />
 
-    <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+    <TextView
         android:id="@+id/navigationDrawerHeadlineUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Ben Ohayon"
+        tools:text="Ben Ohayon"
         android:textColor="@color/white"
         android:textSize="16dp" />
 
-    <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+    <TextView
         android:id="@+id/navigationDrawerHeadlineUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="User@Email.com"
+        tools:text="User@Email.com"
         android:textColor="@color/white"
         android:textSize="16dp" />
 

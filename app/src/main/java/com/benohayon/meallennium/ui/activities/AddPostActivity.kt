@@ -11,8 +11,10 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.view.View
 import android.webkit.MimeTypeMap
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.benohayon.meallennium.R
@@ -26,8 +28,6 @@ import com.benohayon.meallennium.framework.models.Post
 import com.benohayon.meallennium.framework.models.TAKEN_PICTURE_URL_KEY
 import com.benohayon.meallennium.framework.utils.PopupManager
 import com.benohayon.meallennium.ui.custom_views.TopActionBar
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledEditText
-import com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
 import com.nostra13.universalimageloader.core.ImageLoader
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -38,14 +38,14 @@ import java.util.*
 class AddPostActivity : AppCompatActivity() {
 
     private lateinit var topActionBar: TopActionBar
-    private lateinit var postTitleEditText: StyledEditText
-    private lateinit var postSummeryEditText: StyledEditText
-    private lateinit var postDescriptionEditText: StyledEditText
-    private lateinit var takePictureButton: StyledTextView
-    private lateinit var pickFromGalleryButton: StyledTextView
+    private lateinit var postTitleEditText: EditText
+    private lateinit var postSummeryEditText: EditText
+    private lateinit var postDescriptionEditText: EditText
+    private lateinit var takePictureButton: TextView
+    private lateinit var pickFromGalleryButton: TextView
     private lateinit var imageContainer: ImageView
-    private lateinit var createButton: StyledTextView
-    private lateinit var cancelButton: StyledTextView
+    private lateinit var createButton: TextView
+    private lateinit var cancelButton: TextView
     private lateinit var progressBar: ProgressBar
 
     private var imageUri: Uri? = null

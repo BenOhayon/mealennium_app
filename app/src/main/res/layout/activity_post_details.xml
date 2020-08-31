@@ -20,7 +20,7 @@
         android:layout_marginTop="10dp"
         android:src="@mipmap/meallennium_launcher_icon" />
 
-    <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+    <TextView
         android:id="@+id/postDetailsScreenSummery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,9 +29,10 @@
         android:gravity="center"
         android:lineSpacingExtra="2dp"
         android:textSize="17dp"
+        android:fontFamily="@font/proximanova_regular"
         tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu accumsan nisl, ac ornare sapien. Sed fermentum ipsum nec interdum venenatis. Donec sollicitudin augue tortor." />
 
-    <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+    <TextView
         android:id="@+id/postDetailsScreenContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,6 +40,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:lineSpacingExtra="2dp"
+        android:fontFamily="@font/proximanova_regular"
         tools:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a," />
 
     <LinearLayout
@@ -48,19 +50,20 @@
         android:gravity="bottom|center"
         android:orientation="horizontal">
 
-        <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="bottom|center"
             android:text="@string/post_details_screen_created_by_text"
-            app:fontType="proxima_nova-bold" />
+            android:fontFamily="@font/proximanova_bold" />
 
-        <com.benohayon.meallennium.ui.custom_views.styled_views.StyledTextView
+        <TextView
             android:id="@+id/postDetailsCreatedBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="bottom|center"
-            tools:text="Ben Ohayon" />
+            tools:text="Ben Ohayon"
+            android:fontFamily="@font/proximanova_regular"/>
 
     </LinearLayout>
 
