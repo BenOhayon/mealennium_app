@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:src="@mipmap/meallennium_launcher_icon"
+        android:src="@mipmap/mealennium_launcher_icon"
         android:layout_weight="1.5"/>
 
     <LinearLayout

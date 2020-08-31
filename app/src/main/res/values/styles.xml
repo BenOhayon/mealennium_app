@@ -13,8 +13,8 @@
     </style>
 
     <style name="buttonStyle">
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
         <item name="android:background">@drawable/styled_button_background</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/app_button_text_size</item>

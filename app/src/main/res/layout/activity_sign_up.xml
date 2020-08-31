@@ -4,41 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGrey"
-    tools:context=".ui.fragments.SignUpFragment">
+    tools:context=".ui.activities.SignUpActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="8">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/signUpActivityBackButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back_icon_black"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"/>
 
         <com.benohayon.meallennium.ui.custom_views.AppTitleView
             android:id="@+id/signUpScreenMeallenniumLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="45dp"
-            android:layout_weight="1" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpActivityBackButton"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="6"
             android:orientation="vertical"
-            android:paddingTop="60dp">
+            android:layout_below="@+id/signUpScreenMeallenniumLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp">
 
             <EditText
-                android:id="@+id/signUpScreenNameEditText"
+                android:id="@+id/signUpActivityNameEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:background="@color/white"
                 android:hint="@string/sign_up_screen_name_edit_text_hint"
                 android:inputType="textEmailAddress"
-                android:textSize="@dimen/app_edit_text_text_size" />
+                android:textSize="@dimen/app_edit_text_text_size"/>
 
             <EditText
-                android:id="@+id/signUpScreenEmailEditText"
+                android:id="@+id/signUpActivityEmailEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
                 android:layout_height="@dimen/edit_text_height"
@@ -49,7 +57,7 @@
                 android:textSize="@dimen/app_edit_text_text_size" />
 
             <EditText
-                android:id="@+id/signUpScreenPasswordEditText"
+                android:id="@+id/signUpActivityPasswordEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
                 android:layout_height="@dimen/edit_text_height"
@@ -60,7 +68,7 @@
                 android:textSize="@dimen/app_edit_text_text_size" />
 
             <EditText
-                android:id="@+id/signUpScreenConfirmPasswordEditText"
+                android:id="@+id/signUpActivityConfirmPasswordEditText"
                 style="@style/editTextStyle"
                 android:layout_width="@dimen/sign_in_button_width"
                 android:layout_height="@dimen/edit_text_height"
@@ -75,32 +83,26 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
 
             <TextView
-                android:id="@+id/signUpScreenSignUpButton"
+                android:id="@+id/signUpActivitySignUpButton"
                 style="@style/buttonStyle"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
-                android:text="@string/sign_up_screen_sign_up_button_text" />
-
-            <TextView
-                android:id="@+id/signUpScreenBackButton"
-                style="@style/buttonStyle"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_up_screen_back_button_text" />
+                android:textAllCaps="true"
+                android:text="@string/sign_up_screen_sign_up_button_text"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/proximanova_bold"/>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <ProgressBar
-        android:id="@+id/signUpScreenProgressBar"
+        android:id="@+id/signUpActivityProgressBar"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

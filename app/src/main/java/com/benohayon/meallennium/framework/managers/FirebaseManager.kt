@@ -1,5 +1,6 @@
 package com.benohayon.meallennium.framework.managers
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -125,10 +126,10 @@ object FirebaseManager {
         }
     }
 
-    fun connectWithFacebook(fragment: Fragment, onSuccess: () -> Unit, onFail: (String) -> Unit, onCancel: () -> Unit) {
+    fun connectWithFacebook(context: Context, onSuccess: () -> Unit, onFail: (String) -> Unit, onCancel: () -> Unit) {
         facebookLoginManager.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
             override fun onSuccess(result: LoginResult?) {
-                FacebookManager.loadFacebookUserDetails(fragment.context!!, AccessToken.getCurrentAccessToken(), userLoggedInCallback = {
+                FacebookManager.loadFacebookUserDetails(context, AccessToken.getCurrentAccessToken(), userLoggedInCallback = {
                     onSuccess()
                 })
             }
@@ -142,7 +143,7 @@ object FirebaseManager {
             }
         })
 
-        facebookLoginManager.logInWithReadPermissions(fragment, mutableListOf("email", "public_profile"))
+        facebookLoginManager.logInWithReadPermissions(context as Activity, mutableListOf("email", "public_profile"))
     }
 
     fun setCallbackManagerOnActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

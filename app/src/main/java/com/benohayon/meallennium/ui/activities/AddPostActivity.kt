@@ -26,7 +26,7 @@ import com.benohayon.meallennium.framework.models.IMAGE_CAPTURE_REQUEST
 import com.benohayon.meallennium.framework.models.PICK_IMAGE_FROM_GALLERY_REQUEST
 import com.benohayon.meallennium.framework.models.Post
 import com.benohayon.meallennium.framework.models.TAKEN_PICTURE_URL_KEY
-import com.benohayon.meallennium.framework.utils.PopupManager
+import com.benohayon.meallennium.framework.utils.MealenniumPopupManager
 import com.benohayon.meallennium.ui.custom_views.TopActionBar
 import com.nostra13.universalimageloader.core.ImageLoader
 import java.io.ByteArrayOutputStream
@@ -73,7 +73,7 @@ class AddPostActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.addPostActivityProgressBar)
 
         cancelButton.setOnClickListener {
-            PopupManager.showDiscardDataMessage(this) {
+            MealenniumPopupManager.showDiscardDataMessage(this) {
                 finish()
             }
         }
@@ -89,7 +89,7 @@ class AddPostActivity : AppCompatActivity() {
                     finish()
                 }, onFail = {
                     progressBar.visibility = View.INVISIBLE
-                    PopupManager.showInformationPopup(this, getString(R.string.alert_post_creation_failure_title), it)
+                    MealenniumPopupManager.showInformationPopup(this, getString(R.string.alert_post_creation_failure_title), it)
                 })
             }
         }
@@ -175,7 +175,7 @@ class AddPostActivity : AppCompatActivity() {
         topActionBar.centerText = getString(R.string.add_post_activity_top_centre_text)
         topActionBar.setLeftButtonResource(R.drawable.back_icon_white)
         topActionBar.setLeftButtonOnClickListener {
-            PopupManager.showDiscardDataMessage(this) {
+            MealenniumPopupManager.showDiscardDataMessage(this) {
                 finish()
             }
         }
@@ -233,7 +233,7 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        PopupManager.showDiscardDataMessage(this) {
+        MealenniumPopupManager.showDiscardDataMessage(this) {
             finish()
         }
     }

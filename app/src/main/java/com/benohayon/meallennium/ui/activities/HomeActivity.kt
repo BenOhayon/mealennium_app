@@ -19,7 +19,7 @@ import com.benohayon.meallennium.framework.managers.UserManager
 import com.benohayon.meallennium.framework.models.CREATE_POST_REQUEST
 import com.benohayon.meallennium.framework.models.POST_LIST_ACTIVITY_SEARCH_BOX_ANIMATION_DURATION
 import com.benohayon.meallennium.framework.utils.MealenniumFragmentManager
-import com.benohayon.meallennium.framework.utils.PopupManager
+import com.benohayon.meallennium.framework.utils.MealenniumPopupManager
 import com.benohayon.meallennium.ui.activities.abs.BaseActivity
 import com.benohayon.meallennium.ui.custom_views.TopActionBar
 import com.benohayon.meallennium.ui.fragments.MyPostsFragment
@@ -142,7 +142,7 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun requestSignOut() {
-        PopupManager.showConfirmationPopup(this, getString(R.string.alert_sign_out_title), getString(R.string.alert_sign_out_message),
+        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.alert_sign_out_title), getString(R.string.alert_sign_out_message),
                 onYesClick = { _, _ ->
                     progressBar.visibility = View.VISIBLE
                     drawerLayout.closeDrawer(GravityCompat.START)
@@ -208,7 +208,7 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun requestExit() {
-        PopupManager.showConfirmationPopup(this, getString(R.string.alert_exit_title), getString(R.string.alert_exit_message),
+        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.alert_exit_title), getString(R.string.alert_exit_message),
                 onYesClick = { _, _ ->
                     finish()
                 })

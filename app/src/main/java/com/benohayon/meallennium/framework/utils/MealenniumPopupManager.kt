@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.benohayon.meallennium.R
 
-object PopupManager {
+object MealenniumPopupManager {
 
     private fun getInflatedView(context: Context, title: String, message: String): View? {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
