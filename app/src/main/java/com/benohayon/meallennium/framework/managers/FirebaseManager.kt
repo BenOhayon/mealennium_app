@@ -111,7 +111,7 @@ object FirebaseManager {
 
             // move to main activity
             val credential = GoogleAuthProvider.getCredential(account?.id, null)
-            FirebaseManager.auth.signInWithCredential(credential)
+            auth.signInWithCredential(credential)
                     .addOnCompleteListener(activity) {
                         if (task.isSuccessful) {
                             onSuccess(account)
@@ -164,8 +164,8 @@ object FirebaseManager {
             when (loginMethod) {
                 LoginMethod.EmailPassword -> {
                     if (firebaseUser != null) {
-                        UserManager.storeName(context, firebaseUser?.displayName)
-                        UserManager.storeEmail(context, firebaseUser?.email)
+                        UserManager.storeName(context, firebaseUser.displayName)
+                        UserManager.storeEmail(context, firebaseUser.email)
                         userLoggedInCallback()
                     } else
                         userLoggedOutCallback()

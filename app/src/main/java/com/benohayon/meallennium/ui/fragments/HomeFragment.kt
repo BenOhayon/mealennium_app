@@ -20,6 +20,7 @@ import com.benohayon.meallennium.ui.custom_views.FacebookSignInButton
 import com.benohayon.meallennium.ui.custom_views.GoogleSignInButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.Scope
 
 
 class HomeFragment : Fragment() {
@@ -63,7 +64,16 @@ class HomeFragment : Fragment() {
         googleSignInButton = view.findViewById(R.id.homeScreenSignInWithGoogleButton)
         googleSignInButton.setOnClickListener {
             progressBar.visibility = View.VISIBLE
-            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build()
+            val googleScope = arrayOf("https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email")
+            val firstScope = Scope(googleScope[0])
+            val secondScope = Scope(googleScope[1])
+            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(context?.getString(R.string.default_web_client_id))
+                    .requestScopes(firstScope, secondScope)
+                    .requestId()
+                    .requestEmail()
+                    .build()
+
             val googleSignInClient = GoogleSignIn.getClient(activity!!, gso)
             val signInIntent = googleSignInClient.signInIntent
             startActivityForResult(signInIntent, GOOGLE_SIGN_IN_REQUEST_CODE)

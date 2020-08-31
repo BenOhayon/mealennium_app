@@ -28,7 +28,7 @@
                 android:id="@+id/addPostActivityImageContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/meallennium_splash"
+                android:src="@drawable/mealennium_logo"
                 android:background="@color/brilliantSilver"/>
 
         </FrameLayout>

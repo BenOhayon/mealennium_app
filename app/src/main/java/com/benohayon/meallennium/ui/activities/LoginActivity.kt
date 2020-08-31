@@ -10,7 +10,7 @@ import com.benohayon.meallennium.ui.fragments.HomeFragment
 class LoginActivity : BaseActivity() {
 
     override val layoutResource: Int
-        get() = R.layout.activity_home
+        get() = R.layout.activity_login
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
