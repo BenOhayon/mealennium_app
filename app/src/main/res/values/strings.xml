@@ -64,7 +64,6 @@
     <string name="navigation_drawer_menu_settings_option_text">Settings</string>
     <string name="navigation_drawer_menu_sign_out_option_text">Sign Out</string>
     <string name="navigation_drawer_menu_share_post_option_text">Share Post…</string>
-    <string name="navigation_drawer_menu_actions_group_text">Actions</string>
     <string name="navigation_drawer_menu_about_option_text">About</string>
 
     About Activity
@@ -78,6 +77,19 @@
     Top Action Bar
     <string name="top_action_bar_search_edit_text_hint">Search a post…</string>
     <string name="top_action_bar_center_text">Share Your Experience</string>
+    <string name="title_activity_settings">Settings</string>
 
+    Settings Activity
+    <string name="settings_activity_account_option_text">Account</string>
+    <string name="settings_activity_theme_option_text">Theme</string>
 
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

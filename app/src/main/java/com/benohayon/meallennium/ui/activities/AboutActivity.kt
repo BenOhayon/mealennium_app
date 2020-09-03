@@ -5,7 +5,6 @@ import android.widget.TextView
 import com.benohayon.meallennium.BuildConfig
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.ui.activities.abs.BaseActivity
-import com.benohayon.meallennium.ui.custom_views.TopActionBar
 
 class AboutActivity : BaseActivity() {
 
@@ -13,7 +12,6 @@ class AboutActivity : BaseActivity() {
         get() = R.layout.activity_about
 
     private lateinit var versionText: TextView
-    private lateinit var topActionBar: TopActionBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +20,20 @@ class AboutActivity : BaseActivity() {
     }
 
     private fun initUI() {
+        initActionBar()
         versionText = findViewById(R.id.aboutActivityVersionValueText)
-        topActionBar = findViewById(R.id.aboutActivityTopActionBar)
-        topActionBar.setLeftButtonResource(R.drawable.back_icon_white)
-        topActionBar.setLeftButtonOnClickListener { finish() }
-        topActionBar.centerText = getString(R.string.about_screen_top_action_bar_center_text)
         versionText.text = BuildConfig.VERSION_NAME
+    }
+
+    private fun initActionBar() {
+        supportActionBar?.show()
+        title = getString(R.string.about_screen_top_action_bar_center_text)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon_white)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

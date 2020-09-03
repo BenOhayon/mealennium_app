@@ -8,33 +8,39 @@ import com.benohayon.meallennium.framework.models.POST_AUTHOR_KEY
 import com.benohayon.meallennium.framework.models.POST_CONTENT_KEY
 import com.benohayon.meallennium.framework.models.POST_SUMMERY_KEY
 import com.benohayon.meallennium.framework.models.POST_TITLE_KEY
-import com.benohayon.meallennium.ui.custom_views.TopActionBar
 
 class PostDetailsActivity : AppCompatActivity() {
 
     private lateinit var summeryTextView: TextView
     private lateinit var contentTextView: TextView
     private lateinit var createdByText: TextView
-    private lateinit var topActionBar: TopActionBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_details)
+        initUI()
+    }
 
-        topActionBar = findViewById(R.id.postDetailsScreenTopActionBar)
+    private fun initUI() {
+        initActionBar()
         summeryTextView = findViewById(R.id.postDetailsScreenSummery)
         contentTextView = findViewById(R.id.postDetailsScreenContent)
         createdByText = findViewById(R.id.postDetailsCreatedBy)
 
-        val fromPostList = intent
+        createdByText.text = intent.getStringExtra(POST_AUTHOR_KEY)
+        summeryTextView.text = intent.getStringExtra(POST_SUMMERY_KEY)
+        contentTextView.text = intent.getStringExtra(POST_CONTENT_KEY)
+    }
 
-        topActionBar.setLeftButtonResource(R.drawable.back_icon_white)
-        topActionBar.setLeftButtonOnClickListener {
-            finish()
-        }
-        topActionBar.centerText = fromPostList.getStringExtra(POST_TITLE_KEY)
-        createdByText.text = fromPostList.getStringExtra(POST_AUTHOR_KEY)
-        summeryTextView.text = fromPostList.getStringExtra(POST_SUMMERY_KEY)
-        contentTextView.text = fromPostList.getStringExtra(POST_CONTENT_KEY)
+    private fun initActionBar() {
+        supportActionBar?.show()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon_white)
+        title = intent.getStringExtra(POST_TITLE_KEY)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

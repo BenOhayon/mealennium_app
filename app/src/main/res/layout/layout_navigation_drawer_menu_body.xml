@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@android:color/white">
+
+    <FrameLayout
+        android:id="@+id/navigationDrawerMenuHomeOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_drawer_menu_home_option_text"
+            android:textSize="@dimen/navigation_drawer_menu_option_text_size"
+            android:textColor="@android:color/black"
+            android:layout_margin="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/brilliantBlue"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navigationDrawerMenuMyPostsOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_drawer_menu_my_posts_option_text"
+            android:textSize="@dimen/navigation_drawer_menu_option_text_size"
+            android:textColor="@android:color/black"
+            android:layout_margin="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/brilliantBlue"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navigationDrawerMenuSettingsOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_drawer_menu_settings_option_text"
+            android:textSize="@dimen/navigation_drawer_menu_option_text_size"
+            android:textColor="@android:color/black"
+            android:layout_margin="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/brilliantBlue"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navigationDrawerMenuSignOutOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_drawer_menu_sign_out_option_text"
+            android:textSize="@dimen/navigation_drawer_menu_option_text_size"
+            android:textColor="@android:color/black"
+            android:layout_margin="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/brilliantBlue"/>
+
+    </FrameLayout>
+
+</LinearLayout>

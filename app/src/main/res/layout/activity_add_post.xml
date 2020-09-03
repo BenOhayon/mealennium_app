@@ -10,34 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.benohayon.meallennium.ui.custom_views.TopActionBar
-            android:id="@+id/addPostActivityAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/addPostActivityBottomButtonsFrame"
-            android:layout_below="@+id/addPostActivityPictureCaptureButtonsFrame"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="15dp">
-
-            <ImageView
-                android:id="@+id/addPostActivityImageContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/mealennium_logo"
-                android:background="@color/brilliantSilver"/>
-
-        </FrameLayout>
-
         <LinearLayout
             android:id="@+id/addPostActivityPostDetailsInputFrame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/addPostActivityAppBar"
+            android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="20dp"
@@ -120,6 +97,23 @@
 
         </LinearLayout>
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/addPostActivityBottomButtonsFrame"
+            android:layout_below="@+id/addPostActivityPictureCaptureButtonsFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp">
+
+            <ImageView
+                android:id="@+id/addPostActivityImageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mealennium_logo"
+                android:background="@color/brilliantSilver"/>
+
+        </FrameLayout>
+
         <LinearLayout
             android:id="@+id/addPostActivityBottomButtonsFrame"
             android:layout_width="wrap_content"
@@ -135,15 +129,7 @@
                 style="@style/buttonStyle"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
                 android:text="@string/add_post_activity_create_button_text" />
-
-            <TextView
-                android:id="@+id/addPostActivityCancelButton"
-                style="@style/buttonStyle"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/add_post_activity_cancel_button_text" />
 
         </LinearLayout>
 

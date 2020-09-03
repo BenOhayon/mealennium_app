@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentActivity
 
 object MealenniumFragmentManager {
 
-    fun moveToFragment(activity: FragmentActivity, fragment: Fragment, containerRes: Int) {
+    fun openFragment(activity: FragmentActivity, fragment: Fragment, containerRes: Int) {
         activity.supportFragmentManager.beginTransaction()
                 .replace(containerRes, fragment)
                 .addToBackStack(null)

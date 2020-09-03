@@ -8,11 +8,6 @@
     android:orientation="vertical"
     tools:context=".ui.activities.PostDetailsActivity">
 
-    <com.benohayon.meallennium.ui.custom_views.TopActionBar
-        android:id="@+id/postDetailsScreenTopActionBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <ImageView
         android:id="@+id/postDetailsScreenImage"
         android:layout_width="match_parent"

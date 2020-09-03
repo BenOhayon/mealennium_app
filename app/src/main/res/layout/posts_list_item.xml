@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textSize="16dp"
-            tools:text="Post Title" />
+            tools:text="Post Title"
+            android:fontFamily="@font/proximanova_regular"/>
 
         <TextView
             android:id="@+id/postListItemPostContent"
@@ -38,7 +39,8 @@
             android:baselineAligned="false"
             android:gravity="center"
             android:textSize="13dp"
-            tools:text="This is the summary of this post" />
+            tools:text="This is the summary of this post"
+            android:fontFamily="@font/proximanova_regular"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -49,14 +51,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                android:text="@string/post_list_item_by_text"/>
+                android:text="@string/post_list_item_by_text"
+                android:fontFamily="@font/proximanova_regular"/>
 
             <TextView
                 android:id="@+id/postListItemAuthorName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                tools:text="Author name"/>
+                tools:text="Author name"
+                android:fontFamily="@font/proximanova_regular"/>
 
         </LinearLayout>
 

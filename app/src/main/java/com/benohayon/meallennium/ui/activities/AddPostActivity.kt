@@ -27,7 +27,7 @@ import com.benohayon.meallennium.framework.models.PICK_IMAGE_FROM_GALLERY_REQUES
 import com.benohayon.meallennium.framework.models.Post
 import com.benohayon.meallennium.framework.models.TAKEN_PICTURE_URL_KEY
 import com.benohayon.meallennium.framework.utils.MealenniumPopupManager
-import com.benohayon.meallennium.ui.custom_views.TopActionBar
+import com.benohayon.meallennium.createCustomViewForActionBar
 import com.nostra13.universalimageloader.core.ImageLoader
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -37,7 +37,6 @@ import java.util.*
 
 class AddPostActivity : AppCompatActivity() {
 
-    private lateinit var topActionBar: TopActionBar
     private lateinit var postTitleEditText: EditText
     private lateinit var postSummeryEditText: EditText
     private lateinit var postDescriptionEditText: EditText
@@ -45,7 +44,6 @@ class AddPostActivity : AppCompatActivity() {
     private lateinit var pickFromGalleryButton: TextView
     private lateinit var imageContainer: ImageView
     private lateinit var createButton: TextView
-    private lateinit var cancelButton: TextView
     private lateinit var progressBar: ProgressBar
 
     private var imageUri: Uri? = null
@@ -61,7 +59,6 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     private fun initUI() {
-        topActionBar = findViewById(R.id.addPostActivityAppBar)
         postTitleEditText = findViewById(R.id.addPostActivityPostTitleEditText)
         postSummeryEditText = findViewById(R.id.addPostActivityPostSummeryEditText)
         postDescriptionEditText = findViewById(R.id.addPostActivityPostDescriptionEditText)
@@ -69,14 +66,7 @@ class AddPostActivity : AppCompatActivity() {
         pickFromGalleryButton = findViewById(R.id.addPostActivityPickFromGalleryButton)
         imageContainer = findViewById(R.id.addPostActivityImageContainer)
         createButton = findViewById(R.id.addPostActivityCreateButton)
-        cancelButton = findViewById(R.id.addPostActivityCancelButton)
         progressBar = findViewById(R.id.addPostActivityProgressBar)
-
-        cancelButton.setOnClickListener {
-            MealenniumPopupManager.showDiscardDataMessage(this) {
-                finish()
-            }
-        }
 
         createButton.setOnClickListener {
             // create that post in Firebase server
@@ -121,10 +111,11 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     private fun openGallery() {
-        val pickFromGalleryIntent = Intent()
-        pickFromGalleryIntent.type = "image/*"
-        pickFromGalleryIntent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(Intent.createChooser(pickFromGalleryIntent, "Select Picture"), PICK_IMAGE_FROM_GALLERY_REQUEST)
+        Intent().apply {
+            type = "image/*"
+            action = Intent.ACTION_GET_CONTENT
+            startActivityForResult(Intent.createChooser(this, "Select Picture"), PICK_IMAGE_FROM_GALLERY_REQUEST)
+        }
     }
 
     private fun getFileExtension(uri: Uri): String? {
@@ -172,13 +163,11 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     private fun initTopActionBar() {
-        topActionBar.centerText = getString(R.string.add_post_activity_top_centre_text)
-        topActionBar.setLeftButtonResource(R.drawable.back_icon_white)
-        topActionBar.setLeftButtonOnClickListener {
-            MealenniumPopupManager.showDiscardDataMessage(this) {
-                finish()
-            }
-        }
+        title = getString(R.string.add_post_activity_top_centre_text)
+        supportActionBar?.show()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon_white)
+        supportActionBar?.customView = createCustomViewForActionBar(this, title)
     }
 
     private fun takePicture() {
@@ -233,6 +222,15 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        cancelPostCreation()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        cancelPostCreation()
+        return true
+    }
+
+    private fun cancelPostCreation() {
         MealenniumPopupManager.showDiscardDataMessage(this) {
             finish()
         }

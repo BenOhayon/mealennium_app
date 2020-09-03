@@ -15,4 +15,6 @@
 
     <dimen name="about_activity_version_text_size">20dp</dimen>
     <dimen name="about_activity_logo_dimensions">250dp</dimen>
+
+    <dimen name="navigation_drawer_menu_option_text_size">16dp</dimen>
 </resources>
