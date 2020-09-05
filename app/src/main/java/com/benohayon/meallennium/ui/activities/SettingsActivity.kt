@@ -29,7 +29,7 @@ class SettingsActivity : BaseActivity(),
 
         supportFragmentManager.addOnBackStackChangedListener {
             if (supportFragmentManager.backStackEntryCount == 0) {
-                setTitle(R.string.title_activity_settings)
+                setTitle(R.string.mealennium_settings_activity_title)
             }
         }
 
@@ -83,7 +83,7 @@ class SettingsActivity : BaseActivity(),
 
     class AccountFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-            setPreferencesFromResource(R.xml.messages_preferences, rootKey)
+            setPreferencesFromResource(R.xml.account_preferences, rootKey)
             val signaturePreference: EditTextPreference? = findPreference("signature")
             signaturePreference?.text = "Hello to you"
         }
@@ -91,7 +91,7 @@ class SettingsActivity : BaseActivity(),
 
     class ThemeFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-            setPreferencesFromResource(R.xml.sync_preferences, rootKey)
+            setPreferencesFromResource(R.xml.theme_preferences, rootKey)
         }
     }
 }

@@ -51,10 +51,10 @@ class LoginActivity : BaseActivity() {
                 startActivityAndFinish(toPostListActivity)
             }, onFail = {
                 progressBar.visibility = View.INVISIBLE
-                MealenniumPopupManager.showInformationPopup(this, getString(R.string.alert_user_authentication_failed_title), it)
+                MealenniumPopupManager.showInformationPopup(this, getString(R.string.mealennium_alert_user_authentication_failed_title), it)
             }, onCancel = {
                 progressBar.visibility = View.INVISIBLE
-                MealenniumPopupManager.showInformationPopup(this, getString(R.string.alert_user_authentication_canceled_title), getString(R.string.alert_user_authentication_canceled_message))
+                MealenniumPopupManager.showInformationPopup(this, getString(R.string.mealennium_alert_user_authentication_canceled_title), getString(R.string.mealennium_alert_user_authentication_canceled_message))
             })
         }
 
@@ -87,7 +87,7 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun requestExit() {
-        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.alert_exit_title), getString(R.string.alert_exit_message),
+        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.mealennium_alert_exit_title), getString(R.string.mealennium_alert_exit_message),
                 onYesClick = { dialog, which ->
                     finish()
                 })

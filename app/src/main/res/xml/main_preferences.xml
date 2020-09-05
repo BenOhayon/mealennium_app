@@ -4,12 +4,12 @@
         app:fragment="com.benohayon.meallennium.ui.activities.SettingsActivity$AccountFragment"
         app:icon="@drawable/settings_account_image"
         app:key="settings_main_account"
-        app:title="@string/settings_activity_account_option_text" />
+        app:title="@string/mealennium_settings_activity_account_option_text" />
 
     <Preference
         app:fragment="com.benohayon.meallennium.ui.activities.SettingsActivity$ThemeFragment"
         app:icon="@drawable/settings_theme_image"
         app:key="settings_main_theme"
-        app:title="@string/settings_activity_theme_option_text" />
+        app:title="@string/mealennium_settings_activity_theme_option_text" />
 
 </PreferenceScreen>

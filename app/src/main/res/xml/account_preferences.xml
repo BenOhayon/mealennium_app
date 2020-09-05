@@ -1,0 +1,9 @@
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditTextPreference
+        app:key="signature"
+        app:title="@string/mealennium_signature_title"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>

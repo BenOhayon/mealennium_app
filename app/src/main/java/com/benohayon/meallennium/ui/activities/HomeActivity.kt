@@ -43,7 +43,7 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun initActionBar() {
-        title = getString(R.string.top_action_bar_center_text)
+        title = getString(R.string.mealennium_top_action_bar_center_text)
         supportActionBar?.show()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.navigation_drawer_icon)
@@ -114,7 +114,7 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun requestSignOut() {
-        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.alert_sign_out_title), getString(R.string.alert_sign_out_message),
+        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.mealennium_alert_sign_out_title), getString(R.string.mealennium_alert_sign_out_message),
                 onYesClick = { _, _ ->
                     progressBar.visibility = View.VISIBLE
                     drawerLayout.closeDrawer(GravityCompat.START)
@@ -148,7 +148,7 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun requestExit() {
-        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.alert_exit_title), getString(R.string.alert_exit_message),
+        MealenniumPopupManager.showConfirmationPopup(this, getString(R.string.mealennium_alert_exit_title), getString(R.string.mealennium_alert_exit_message),
                 onYesClick = { _, _ ->
                     finish()
                 })

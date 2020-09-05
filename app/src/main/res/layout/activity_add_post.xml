@@ -28,7 +28,7 @@
                     android:id="@+id/addPostActivityPostTitleEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/add_post_activity_post_title_edit_text_hint"
+                    android:hint="@string/mealennium_add_post_activity_post_title_edit_text_hint"
                     android:inputType="text"
                     android:lines="1" />
 
@@ -42,7 +42,7 @@
                     android:id="@+id/addPostActivityPostSummeryEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/add_post_activity_post_summery_edit_text_hint"
+                    android:hint="@string/mealennium_add_post_activity_post_summery_edit_text_hint"
                     android:inputType="text"
                     android:lines="1" />
 
@@ -56,7 +56,7 @@
                     android:id="@+id/addPostActivityPostDescriptionEditText"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/add_post_activity_post_description_edit_text_hint"
+                    android:hint="@string/mealennium_add_post_activity_post_description_edit_text_hint"
                     android:inputType="text|textImeMultiLine" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -82,7 +82,7 @@
                 android:paddingTop="5dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="5dp"
-                android:text="@string/add_post_activity_take_picture_button_text" />
+                android:text="@string/mealennium_add_post_activity_take_picture_button_text" />
 
             <TextView
                 android:id="@+id/addPostActivityPickFromGalleryButton"
@@ -93,7 +93,7 @@
                 android:paddingTop="5dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="5dp"
-                android:text="@string/add_post_activity_pick_from_gallery_button_text" />
+                android:text="@string/mealennium_add_post_activity_pick_from_gallery_button_text" />
 
         </LinearLayout>
 
@@ -129,7 +129,7 @@
                 style="@style/buttonStyle"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@string/add_post_activity_create_button_text" />
+                android:text="@string/mealennium_add_post_activity_create_button_text" />
 
         </LinearLayout>
 

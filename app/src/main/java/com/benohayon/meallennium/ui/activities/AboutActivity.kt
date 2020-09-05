@@ -27,7 +27,7 @@ class AboutActivity : BaseActivity() {
 
     private fun initActionBar() {
         supportActionBar?.show()
-        title = getString(R.string.about_screen_top_action_bar_center_text)
+        title = getString(R.string.mealennium_about_screen_top_action_bar_center_text)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon_white)
     }

@@ -41,7 +41,7 @@
                 android:layout_width="@dimen/sign_in_button_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:background="@color/white"
-                android:hint="@string/sign_up_screen_name_edit_text_hint"
+                android:hint="@string/mealennium_sign_up_screen_name_edit_text_hint"
                 android:inputType="textEmailAddress"
                 android:textSize="@dimen/app_edit_text_text_size"/>
 
@@ -52,7 +52,7 @@
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginTop="25dp"
                 android:background="@color/white"
-                android:hint="@string/sign_up_screen_email_edit_text_hint"
+                android:hint="@string/mealennium_sign_up_screen_email_edit_text_hint"
                 android:inputType="textEmailAddress"
                 android:textSize="@dimen/app_edit_text_text_size" />
 
@@ -63,7 +63,7 @@
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginTop="25dp"
                 android:background="@color/white"
-                android:hint="@string/sign_up_screen_password_edit_text_hint"
+                android:hint="@string/mealennium_sign_up_screen_password_edit_text_hint"
                 android:inputType="textPassword"
                 android:textSize="@dimen/app_edit_text_text_size" />
 
@@ -74,7 +74,7 @@
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginTop="25dp"
                 android:background="@color/white"
-                android:hint="@string/sign_up_screen_confirm_password_edit_text_hint"
+                android:hint="@string/mealennium_sign_up_screen_confirm_password_edit_text_hint"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:textSize="@dimen/app_edit_text_text_size" />
@@ -93,7 +93,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true"
-                android:text="@string/sign_up_screen_sign_up_button_text"
+                android:text="@string/mealennium_sign_up_screen_sign_up_button_text"
                 android:layout_marginBottom="30dp"
                 android:fontFamily="@font/proximanova_bold"/>
 

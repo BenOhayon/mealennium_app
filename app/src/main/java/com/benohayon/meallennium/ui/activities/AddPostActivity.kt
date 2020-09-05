@@ -79,7 +79,7 @@ class AddPostActivity : AppCompatActivity() {
                     finish()
                 }, onFail = {
                     progressBar.visibility = View.INVISIBLE
-                    MealenniumPopupManager.showInformationPopup(this, getString(R.string.alert_post_creation_failure_title), it)
+                    MealenniumPopupManager.showInformationPopup(this, getString(R.string.mealennium_alert_post_creation_failure_title), it)
                 })
             }
         }
@@ -163,7 +163,7 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     private fun initTopActionBar() {
-        title = getString(R.string.add_post_activity_top_centre_text)
+        title = getString(R.string.mealennium_add_post_activity_top_centre_text)
         supportActionBar?.show()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon_white)

@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13dp"
-                android:text="@string/post_list_item_by_text"
+                android:text="@string/mealennium_post_list_item_by_text"
                 android:fontFamily="@font/proximanova_regular"/>
 
             <TextView

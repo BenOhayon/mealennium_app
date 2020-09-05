@@ -66,7 +66,7 @@ class LoginEmailActivity : BaseActivity() {
             openHomeActivity()
         }, { errorMessage ->
             progressBar.visibility = View.INVISIBLE
-            MealenniumPopupManager.showInformationPopup(this, resources.getString(R.string.alert_user_authentication_failed_title), errorMessage)
+            MealenniumPopupManager.showInformationPopup(this, resources.getString(R.string.mealennium_alert_user_authentication_failed_title), errorMessage)
         })
     }
 

@@ -87,7 +87,7 @@ class SignUpActivity : BaseActivity() {
                     openHomeActivity()
                 }, onFail = { errorMessage ->
                     progressBar.visibility = View.INVISIBLE
-                    MealenniumPopupManager.showInformationPopup(this, resources.getString(R.string.alert_user_authentication_failed_title), errorMessage)
+                    MealenniumPopupManager.showInformationPopup(this, resources.getString(R.string.mealennium_alert_user_authentication_failed_title), errorMessage)
         })
     }
 
@@ -127,7 +127,7 @@ class SignUpActivity : BaseActivity() {
 
         if (passwordEt.text.toString() != confirmPasswordEt.text.toString()) {
             flag = false
-            MealenniumPopupManager.showInformationPopup(this, resources.getString(R.string.alert_field_validation_error_title), getString(R.string.alert_field_validation_error_message))
+            MealenniumPopupManager.showInformationPopup(this, resources.getString(R.string.mealennium_alert_field_validation_error_title), getString(R.string.mealennium_alert_field_validation_error_message))
         }
 
         return flag

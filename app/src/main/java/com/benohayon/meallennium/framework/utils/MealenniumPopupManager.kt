@@ -25,7 +25,7 @@ object MealenniumPopupManager {
     fun showInformationPopup(context: Context, title: String, message: String) {
         val alert = AlertDialog.Builder(context, R.style.CustomAlertDialog)
                 .setView(getInflatedView(context, title, message))
-                .setPositiveButton(context.resources.getString(R.string.alert_ok_button_text), null)
+                .setPositiveButton(context.resources.getString(R.string.mealennium_alert_ok_button_text), null)
                 .create()
 
         alert.setOnShowListener {
@@ -37,8 +37,8 @@ object MealenniumPopupManager {
     private fun showConfirmationPopup(context: Context, title: String, message: String, onYesClick: (dialog: DialogInterface, which: Int) -> Unit, onNoClick: (dialog: DialogInterface, which: Int) -> Unit) {
         val alert = AlertDialog.Builder(context, R.style.CustomAlertDialog)
                 .setView(getInflatedView(context, title, message))
-                .setPositiveButton(context.resources.getString(R.string.alert_yes_button_text), onYesClick)
-                .setNegativeButton(context.resources.getString(R.string.alert_no_button_text), onNoClick)
+                .setPositiveButton(context.resources.getString(R.string.mealennium_alert_yes_button_text), onYesClick)
+                .setNegativeButton(context.resources.getString(R.string.mealennium_alert_no_button_text), onNoClick)
                 .create()
 
         alert.setCanceledOnTouchOutside(false)
@@ -55,7 +55,7 @@ object MealenniumPopupManager {
     }
 
     fun showDiscardDataMessage(context: Context, onYesClick: () -> Unit) {
-        showConfirmationPopup(context, context.getString(R.string.alert_discard_post_title), context.getString(R.string.alert_discard_post_message)) { _: DialogInterface, _: Int ->
+        showConfirmationPopup(context, context.getString(R.string.mealennium_alert_discard_post_title), context.getString(R.string.mealennium_alert_discard_post_message)) { _: DialogInterface, _: Int ->
             onYesClick()
         }
     }
