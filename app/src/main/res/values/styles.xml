@@ -10,7 +10,7 @@
         <item name="colorControlActivated">@color/brilliantBlue</item>
     </style>
 
-    <style name="activityNoActionBar" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="ActivityNoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar" />
 
     <style name="buttonStyle">
         <item name="android:paddingTop">6dp</item>

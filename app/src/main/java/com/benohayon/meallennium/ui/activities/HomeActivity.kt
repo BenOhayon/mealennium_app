@@ -2,6 +2,7 @@ package com.benohayon.meallennium.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -14,11 +15,13 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.benohayon.meallennium.R
 import com.benohayon.meallennium.createCustomViewForActionBar
 import com.benohayon.meallennium.framework.managers.FirebaseManager
+import com.benohayon.meallennium.framework.managers.FontManager
 import com.benohayon.meallennium.framework.managers.UserManager
 import com.benohayon.meallennium.framework.models.CREATE_POST_REQUEST
 import com.benohayon.meallennium.framework.utils.MealenniumFragmentManager
 import com.benohayon.meallennium.framework.utils.MealenniumPopupManager
 import com.benohayon.meallennium.ui.activities.abs.BaseActivity
+import com.benohayon.meallennium.ui.activities.settings.MainSettingsActivity
 import com.benohayon.meallennium.ui.fragments.MyPostsFragment
 import com.benohayon.meallennium.ui.fragments.PostListFragment
 
@@ -48,6 +51,12 @@ class HomeActivity : BaseActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.navigation_drawer_icon)
         supportActionBar?.customView = createCustomViewForActionBar(this, title)
+
+        val titleTextVIew = TextView(this)
+        titleTextVIew.ellipsize = TextUtils.TruncateAt.END
+        titleTextVIew.textSize = 16.0f
+        titleTextVIew.typeface = FontManager.getProximaNovaRegularFont(this)
+        supportActionBar?.customView = titleTextVIew
     }
 
     override fun onBackPressed() {
@@ -110,7 +119,7 @@ class HomeActivity : BaseActivity() {
     }
 
     private fun openSettingsActivity() {
-        startActivity(Intent(this, SettingsActivity::class.java))
+        startActivity(Intent(this, MainSettingsActivity::class.java))
     }
 
     private fun requestSignOut() {

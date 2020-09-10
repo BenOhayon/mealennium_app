@@ -82,6 +82,7 @@
     Settings Activity
     <string name="mealennium_settings_activity_account_option_text">Account</string>
     <string name="mealennium_settings_activity_theme_option_text">Theme</string>
+    <string name="mealennium_settings_activity_about_option_text">About</string>
 
     <string name="mealennium_signature_title">Your signature</string>
     <string name="mealennium_reply_title">Default reply action</string>
