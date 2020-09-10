@@ -10,9 +10,9 @@
 
     <ImageView
         android:id="@+id/navigationDrawerHeadlineUserImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/settings_account_image_1" />
 
     <TextView
         android:id="@+id/navigationDrawerHeadlineUserName"
@@ -21,15 +21,17 @@
         android:layout_marginTop="8dp"
         tools:text="Ben Ohayon"
         android:textColor="@color/white"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:fontFamily="@font/proximanova_regular"/>
 
     <TextView
         android:id="@+id/navigationDrawerHeadlineUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        tools:text="User@Email.com"
+        tools:text="user.email@gmail.com"
         android:textColor="@color/white"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:fontFamily="@font/proximanova_regular"/>
 
 </LinearLayout>

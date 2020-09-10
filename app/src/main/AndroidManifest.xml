@@ -16,23 +16,30 @@
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
         tools:replace="android:supportsRtl">
+        <activity android:name=".ui.activities.settings.ThemeSettingsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/mealennium_settings_activity_theme_option_text" />
+        <activity android:name=".ui.activities.settings.AccountSettingsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/mealennium_settings_activity_account_option_text" />
         <activity
-            android:name=".ui.activities.SettingsActivity"
+            android:name=".ui.activities.settings.MainSettingsActivity"
             android:label="@string/mealennium_settings_activity_title"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.SignUpActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/activityNoActionBar"/>
+            android:theme="@style/ActivityNoActionBarTheme" />
         <activity
             android:name=".ui.activities.LoginEmailActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/activityNoActionBar"/>
+            android:theme="@style/ActivityNoActionBarTheme" />
         <activity
             android:name=".ui.activities.AddPostActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:label="@string/mealennium_add_post_activity_top_centre_text"/>
         <activity
             android:name=".ui.activities.PostDetailsActivity"
             android:launchMode="singleTask"
@@ -49,12 +56,12 @@
             android:name=".ui.activities.LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/activityNoActionBar"/>
+            android:theme="@style/ActivityNoActionBarTheme" />
         <activity
             android:name=".ui.activities.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/activityNoActionBar">
+            android:theme="@style/ActivityNoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

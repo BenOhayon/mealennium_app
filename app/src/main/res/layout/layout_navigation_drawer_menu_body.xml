@@ -3,8 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:focusable="true"
-    android:clickable="true"
     android:background="@android:color/white">
 
     <FrameLayout
@@ -18,13 +16,14 @@
             android:text="@string/mealennium_navigation_drawer_menu_home_option_text"
             android:textSize="@dimen/navigation_drawer_menu_option_text_size"
             android:textColor="@android:color/black"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
 
     </FrameLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.6dp"
         android:background="@color/brilliantBlue"/>
 
     <FrameLayout
@@ -38,13 +37,14 @@
             android:text="@string/mealennium_navigation_drawer_menu_my_posts_option_text"
             android:textSize="@dimen/navigation_drawer_menu_option_text_size"
             android:textColor="@android:color/black"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
 
     </FrameLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.6dp"
         android:background="@color/brilliantBlue"/>
 
     <FrameLayout
@@ -58,13 +58,14 @@
             android:text="@string/mealennium_navigation_drawer_menu_settings_option_text"
             android:textSize="@dimen/navigation_drawer_menu_option_text_size"
             android:textColor="@android:color/black"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
 
     </FrameLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.6dp"
         android:background="@color/brilliantBlue"/>
 
     <FrameLayout
@@ -78,13 +79,14 @@
             android:text="@string/mealennium_navigation_drawer_menu_sign_out_option_text"
             android:textSize="@dimen/navigation_drawer_menu_option_text_size"
             android:textColor="@android:color/black"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
 
     </FrameLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.6dp"
         android:background="@color/brilliantBlue"/>
 
 </LinearLayout>

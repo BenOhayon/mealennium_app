@@ -163,7 +163,6 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     private fun initTopActionBar() {
-        title = getString(R.string.mealennium_add_post_activity_top_centre_text)
         supportActionBar?.show()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.back_icon_white)

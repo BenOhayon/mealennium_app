@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/settingsActivityAccountOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/settings_account_image_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mealennium_settings_activity_account_option_text"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsActivityAboutOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/settings_info_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mealennium_settings_activity_about_option_text"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settingsActivityThemeOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/settings_theme_image_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mealennium_settings_activity_theme_option_text"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/proximanova_regular"/>
+
+    </LinearLayout>
+</LinearLayout>
